@@ -224,6 +224,10 @@ header .head-content {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: space-between;
+    padding-bottom: 10px;
+  }
+  header .head-content h1 {
+    padding-bottom: 15px;
   }
 }
 @media (max-width: 800px) {
@@ -269,6 +273,7 @@ header .head-content {
 @media (max-width: 800px) {
   .home .content-section .img-content {
     padding: 0;
+    width: 100%;
   }
 }
 .home .content-section .img-content img {
@@ -277,13 +282,22 @@ header .head-content {
 @media (max-width: 800px) {
   .home .content-section .img-content img {
     max-width: 500px;
-    width: 436px;
-    padding: 0;
+    width: 100%;
+    height: auto;
   }
 }
 .home .inverse-content {
   padding-bottom: 30px;
   border-bottom: 2px dashed #c0c0c0;
+}
+@media (max-width: 800px) {
+  .home .inverse-content {
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: space-between;
+  }
 }
 .home .inverse-content .text-content {
   padding-left: 1%;
@@ -297,6 +311,11 @@ header .head-content {
   width: 75%;
   margin: 0 auto 30px;
 }
+@media (max-width: 800px) {
+  .home .content-destination {
+    width: 100%;
+  }
+}
 .home .content-destination img {
   border-radius: 10px;
 }
@@ -306,16 +325,43 @@ header .head-content {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 800px) {
+  .home .content-pick {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
 .home .content-pick .destination {
   width: 30%;
   margin-bottom: 30px;
+}
+@media (max-width: 800px) {
+  .home .content-pick .destination {
+    width: 80%;
+  }
 }
 .home .content-pick .destination .btn {
   background: #377e7f;
   color: #ffffff;
   padding: 10px 30px;
-  border-radius: 10px;
+  border-radius: 18px;
   font-size: 1.8rem;
   width: 83%;
   text-align: center;
+}
+@media (max-width: 800px) {
+  .home .content-pick .destination .btn {
+    background: #17a2b8;
+    color: #ffffff;
+    padding: 10px 30px;
+    border-radius: 18px;
+    font-size: 1.8rem;
+    width: 100%;
+    text-align: center;
+    background: #117a8b;
+    padding: 15px 0;
+  }
 }

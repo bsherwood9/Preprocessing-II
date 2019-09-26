@@ -12,6 +12,10 @@ header {
 
     @media @mobile {
       .flex-set(column, wrap, space-between, space-between);
+      padding-bottom: 10px;
+      h1 {
+        padding-bottom: 15px;
+      }
     }
   }
 }
@@ -50,6 +54,7 @@ header {
       padding-left: 1%;
       @media @mobile {
         padding: 0;
+        width: 100%;
       }
 
       img {
@@ -57,8 +62,8 @@ header {
 
         @media @mobile {
           max-width: 500px;
-          width: 436px;
-          padding: 0;
+          width: 100%;
+          height: auto;
         }
       }
     }
@@ -67,7 +72,9 @@ header {
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
-
+    @media @mobile {
+      .flex-set(column-reverse, wrap, space-between, space-between);
+    }
     .text-content {
       padding-left: 1%;
       padding-right: 0;
@@ -82,7 +89,9 @@ header {
   .content-destination {
     width: 75%;
     margin: 0 auto 30px;
-
+    @media @mobile {
+      width: 100%;
+    }
     img {
       border-radius: 10px;
     }
@@ -94,13 +103,23 @@ header {
     display: flex;
     justify-content: space-between;
 
+    @media @mobile {
+      .flex-set(column, wrap, space-between, center);
+    }
     .destination {
       width: 30%;
       margin-bottom: 30px;
-
+      @media @mobile {
+        width: 80%;
+      }
       .btn {
         //couldn't find the right color here, so I just used the color on the mock-up;
-        .btn-set(#377e7f, @main-bg);
+        .btn-set(#377e7f, @main-bg, 83%);
+        @media @mobile {
+          .btn-set(@button-bg, @main-bg, 100%);
+          background: darken(@button-bg, 10%);
+          padding: 15px 0;
+        }
       }
     }
   }
