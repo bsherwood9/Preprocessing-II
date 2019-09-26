@@ -1,1 +1,15 @@
 // Navigation Styles here
+
+nav {
+  width: 40%;
+  .flex-set(row, nowrap, space-around, center);
+
+  @media @mobile {
+    width: 90%;
+  }
+  a {
+    text-decoration: none;
+    color: @font-color;
+    font-size: 1.6rem;
+  }
+}

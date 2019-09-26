@@ -1,1 +1,18 @@
 // Mixins in here
+.flex-set( @direction, @wrap, @justify, @align) {
+  display: flex;
+  flex-direction: @direction;
+  flex-wrap: @wrap;
+  justify-content: @justify;
+  align-items: @align;
+}
+
+.btn-set(@bgcolor, @color) {
+  background: @bgcolor;
+  color: @color;
+  padding: 10px 30px;
+  border-radius: 10px;
+  font-size: 1.8rem;
+  width: 83%;
+  text-align: center;
+}

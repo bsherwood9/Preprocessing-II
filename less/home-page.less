@@ -1,24 +1,65 @@
-.home {
+header {
+  width: 100%;
+  .flex-set(row, nowrap, center, center);
+  border-bottom: 2px dashed @navigation-border;
 
+  .head-content {
+    .flex-set(row, nowrap, space-between, center);
+    max-width: 800px;
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 20px;
+
+    @media @mobile {
+      .flex-set(column, wrap, space-between, space-between);
+    }
+  }
+}
+.home {
+  @media @mobile {
+    max-width: 500px;
+    width: 90%;
+  }
+  .top-content {
+    border-bottom: 2px dashed @navigation-border;
+
+    .text-content {
+      margin: 30px 0;
+    }
+  }
   .content-section {
     margin: 30px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 
-   
-    
+    @media @mobile {
+      .flex-set(column, wrap, space-between, space-between);
+    }
     .text-content {
       width: 48%;
       padding-right: 1%;
+
+      @media @mobile {
+        width: 100%;
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
+      @media @mobile {
+        padding: 0;
+      }
 
       img {
         border-radius: 10px;
+
+        @media @mobile {
+          max-width: 500px;
+          width: 436px;
+          padding: 0;
+        }
       }
     }
   }
@@ -56,6 +97,11 @@
     .destination {
       width: 30%;
       margin-bottom: 30px;
+
+      .btn {
+        //couldn't find the right color here, so I just used the color on the mock-up;
+        .btn-set(#377e7f, @main-bg);
+      }
     }
   }
-}// home
+} // home
