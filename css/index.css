@@ -186,6 +186,17 @@ nav a {
   color: #212529;
   font-size: 1.6rem;
 }
+nav a:hover {
+  animation: spin 0.4s linear 1 alternate;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .footer {
   width: 100%;
   border-top: 2px dashed silver;
@@ -232,6 +243,12 @@ header .head-content {
 }
 @media (max-width: 800px) {
   .home {
+    max-width: 800px;
+    width: 90%;
+  }
+}
+@media (max-width: 500px) {
+  .home {
     max-width: 500px;
     width: 90%;
   }
@@ -248,7 +265,7 @@ header .head-content {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-@media (max-width: 800px) {
+@media (max-width: 500px) {
   .home .content-section {
     display: flex;
     flex-direction: column;
@@ -261,7 +278,7 @@ header .head-content {
   width: 48%;
   padding-right: 1%;
 }
-@media (max-width: 800px) {
+@media (max-width: 500px) {
   .home .content-section .text-content {
     width: 100%;
   }
@@ -270,7 +287,7 @@ header .head-content {
   width: 48%;
   padding-left: 1%;
 }
-@media (max-width: 800px) {
+@media (max-width: 500px) {
   .home .content-section .img-content {
     padding: 0;
     width: 100%;
@@ -279,7 +296,7 @@ header .head-content {
 .home .content-section .img-content img {
   border-radius: 10px;
 }
-@media (max-width: 800px) {
+@media (max-width: 500px) {
   .home .content-section .img-content img {
     max-width: 500px;
     width: 100%;
@@ -290,7 +307,7 @@ header .head-content {
   padding-bottom: 30px;
   border-bottom: 2px dashed #c0c0c0;
 }
-@media (max-width: 800px) {
+@media (max-width: 500px) {
   .home .inverse-content {
     display: flex;
     flex-direction: column-reverse;
@@ -325,7 +342,7 @@ header .head-content {
   display: flex;
   justify-content: space-between;
 }
-@media (max-width: 800px) {
+@media (max-width: 500px) {
   .home .content-pick {
     display: flex;
     flex-direction: column;
@@ -338,7 +355,7 @@ header .head-content {
   width: 30%;
   margin-bottom: 30px;
 }
-@media (max-width: 800px) {
+@media (max-width: 500px) {
   .home .content-pick .destination {
     width: 80%;
   }
@@ -352,7 +369,7 @@ header .head-content {
   width: 83%;
   text-align: center;
 }
-@media (max-width: 800px) {
+@media (max-width: 500px) {
   .home .content-pick .destination .btn {
     background: #17a2b8;
     color: #ffffff;

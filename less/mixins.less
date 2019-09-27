@@ -16,3 +16,13 @@
   width: @width;
   text-align: center;
 }
+
+.keyframes(@name; @arguments) {
+  @keyframes @name {
+    @arguments();
+  }
+}
+
+.animation(@arguments) {
+  animation: @arguments;
+}

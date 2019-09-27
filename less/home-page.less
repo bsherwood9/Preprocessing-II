@@ -10,7 +10,7 @@ header {
     padding-top: 30px;
     padding-bottom: 20px;
 
-    @media @mobile {
+    @media @tablet {
       .flex-set(column, wrap, space-between, space-between);
       padding-bottom: 10px;
       h1 {
@@ -20,6 +20,10 @@ header {
   }
 }
 .home {
+  @media @tablet {
+    max-width: 800px;
+    width: 90%;
+  }
   @media @mobile {
     max-width: 500px;
     width: 90%;
@@ -89,7 +93,7 @@ header {
   .content-destination {
     width: 75%;
     margin: 0 auto 30px;
-    @media @mobile {
+    @media @tablet {
       width: 100%;
     }
     img {
@@ -109,6 +113,7 @@ header {
     .destination {
       width: 30%;
       margin-bottom: 30px;
+
       @media @mobile {
         width: 80%;
       }
