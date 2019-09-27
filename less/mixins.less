@@ -1,1 +1,28 @@
 // Mixins in here
+.flex-set( @direction, @wrap, @justify, @align) {
+  display: flex;
+  flex-direction: @direction;
+  flex-wrap: @wrap;
+  justify-content: @justify;
+  align-items: @align;
+}
+
+.btn-set(@bgcolor, @color, @width) {
+  background: @bgcolor;
+  color: @color;
+  padding: 10px 30px;
+  border-radius: 18px;
+  font-size: 1.8rem;
+  width: @width;
+  text-align: center;
+}
+
+.keyframes(@name; @arguments) {
+  @keyframes @name {
+    @arguments();
+  }
+}
+
+.animation(@arguments) {
+  animation: @arguments;
+}
